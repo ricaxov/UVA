@@ -5,9 +5,7 @@
 #define pi 3.14159
 #define pb push_back
 #define ll long long
-#define vi vector<int>
 #define ii pair<int,int>
-#define vii vector<pair<int,int> >
 
 using namespace std;
 
