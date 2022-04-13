@@ -23,7 +23,7 @@ void floodfill(int x, int y, int m){
 int main(){
     ios_base::sync_with_stdio(false);cin.tie(NULL);
     int n,x;cin>>n;
-    for(int i=0; i<n; i++){
+	for(int i=0; i<n; i++){
     	cin>>x;
     	cont=0;
     	for(int j=0; j<x; j++){
@@ -32,10 +32,10 @@ int main(){
 			}
 		}
 		for(int j=0; j<x; j++){
-    		for(int k=0; k<x; k++){
-    			if(matrix[j][k]=='x'){
-    				floodfill(j,k,x);
-    				cont++;
+			for(int k=0; k<x; k++){
+				if(matrix[j][k]=='x'){
+					floodfill(j,k,x);
+					cont++;
 				}
 			}
 		}
