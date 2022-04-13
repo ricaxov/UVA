@@ -9,7 +9,6 @@
 using namespace std;
 
 bool vis[1001][1001];
-int matrix[1001][1001];
 int bfs(int sx, int sy, int fx, int fy, int mx, int my){
     queue<pair<int,ii> >q;
     q.push({sx,{sy,0}});
@@ -47,7 +46,6 @@ int main(){
             cin>>x>>c;
             for(int j=0; j<c; j++){
                 cin>>z;
-                matrix[x][z]=1;
                 vis[x][z]=true;
             }
         }
@@ -55,7 +53,6 @@ int main(){
         cout<<bfs(sx,sy,fx,fy,n,m)<<endl;
         for(int i=0; i<1001; i++){
             for(int j=0; j<1001; j++){
-                matrix[i][j]=0;
                 vis[i][j]=false;
             }
         }
