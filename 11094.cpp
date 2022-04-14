@@ -30,15 +30,14 @@ int main(){
     int n,m,x,y;
     while(cin>>n>>m){
     	int maior=0;
-        char agua,terra;
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
                 cin>>matrix[i][j];
             }
         }
         cin>>x>>y;
-        terra=matrix[x][y];
-        agua=terra-1;
+        char agua=terra-1;
+        char terra=matrix[x][y];
         floodfill(x,y,n,m,agua,terra);
         cont=0;
         for(int i=0; i<n; i++){
