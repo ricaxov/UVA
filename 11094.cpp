@@ -36,8 +36,8 @@ int main(){
             }
         }
         cin>>x>>y;
-        char agua=terra-1;
         char terra=matrix[x][y];
+        char agua=terra-1;
         floodfill(x,y,n,m,agua,terra);
         cont=0;
         for(int i=0; i<n; i++){
