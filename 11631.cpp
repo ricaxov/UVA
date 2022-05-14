@@ -47,7 +47,7 @@ struct UF{
     }
 };
 int main(){
-    ios_base::sync_with_stdio(false); cin.tie(NULL);
+    ios_base::sync_with_stdio(false);cin.tie(NULL);
     int m,n;
     cin>>m>>n;
     while(m!=0 || n!=0){
