@@ -47,31 +47,31 @@ struct UF{
     }
 };
 int main(){
-    ios_base::sync_with_stdio(false);cin.tie(NULL);
+    ios_base::sync_with_stdio(false); cin.tie(NULL);
     int m,n;
     cin>>m>>n;
     while(m!=0 || n!=0){
-    	int soma=0;
-	    vector<pair<int,pair<int,int> > >arestas;
-	    for(int i=0;i<n;i++){
-	        int a,b,p;
-	        cin>>a>>b>>p;
-	        arestas.push_back(make_pair(p,make_pair(a,b)));
-	    }
-	    sort(arestas.begin(),arestas.end());
-	    UF estrada(m+1);
-	    int ans=0;
-	    for(int i=0;i<arestas.size();i++){
-	        int peso=arestas[i].first;
-	        soma+=peso;
-	        int a=arestas[i].second.first;
-	        int b=arestas[i].second.second;
-	        if(!estrada.mesmoConjunto(a,b)){
-	            estrada.unir(a,b);
-	            ans+=peso;
-	        }
-	    }
-	    cout<<soma-ans<<endl;
-	    cin>>m>>n;
-	}
+        int soma=0;
+        vector<pair<int,pair<int,int> > >arestas;
+        for(int i=0;i<n;i++){
+            int a,b,p;
+            cin>>a>>b>>p;
+            arestas.push_back(make_pair(p,make_pair(a,b)));
+        }
+        sort(arestas.begin(),arestas.end());
+        UF estrada(m+1);
+        int ans=0;
+        for(int i=0;i<arestas.size();i++){
+            int peso=arestas[i].first;
+            soma+=peso;
+            int a=arestas[i].second.first;
+            int b=arestas[i].second.second;
+            if(!estrada.mesmoConjunto(a,b)){
+                estrada.unir(a,b);
+                ans+=peso;
+            }
+        }
+        cout<<soma-ans<<endl;
+        cin>>m>>n;
+    }
 }
