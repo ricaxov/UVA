@@ -13,6 +13,7 @@ using namespace std;
 
 typedef long long ll;
 typedef pair<int,int> ii;
+
 bool vis[8][8];
 int dx[8]={-1,-2,-2,-1,1,2,2,1}, dy[8]={-2,-1,1,2,-2,-1,1,2};
 int bfs(int startX, int startY, int finishX, int finishY){
