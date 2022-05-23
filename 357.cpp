@@ -30,7 +30,7 @@ int main(){
     ll n;
     while(cin>>n){
         if(coinchange(n)==1){
-            cout<<"There is only "<<coinchange(n)<<" way to produce "<<n<<" cents change."<<endl;
+            cout<<"There is only 1 way to produce "<<n<<" cents change."<<endl;
         }
         else{
             cout<<"There are "<<coinchange(n)<<" ways to produce "<<n<<" cents change."<<endl;
