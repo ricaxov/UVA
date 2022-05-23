@@ -19,23 +19,17 @@ int main(){
     int n,m; cin>>n>>m;
     while(n!=0 || m!=0){
         vector<int>vec1(n),vec2(m);
+        for(int i=0; i<n; i++){
+            cin>>vec1[i];
+        }
+        for(int i=0; i<m; i++){
+            cin>>vec2[i];
+        }
         if(n>m){
-            for(int i=0; i<n; i++){
-                cin>>vec1[i];
-            }
-            for(int i=0; i<m; i++){
-                cin>>vec2[i];
-            }
             cout<<"Loowater is doomed!"<<endl;
         }
         else{
             int ans=0,pos=0;
-            for(int i=0; i<n; i++){
-                cin>>vec1[i];
-            }
-            for(int i=0; i<m; i++){
-                cin>>vec2[i];
-            }
             sort(vec1.begin(), vec1.end());
             sort(vec2.begin(), vec2.end());
             for(int i=0; i<m && pos<n; i++){
