@@ -23,7 +23,7 @@ int main(){
             if(m>n){
                 swap(n,m);
             }
-            if(n%m==0 or n>2*m){
+            if(n%m==0 || n>2*m){
                 n=m=0;
             }
             else{
