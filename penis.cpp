@@ -15,7 +15,7 @@ typedef long long ll;
 typedef pair<int,int> ii;
 
 char matrix[101][101];
-int dx[8]={0,1,0,-1,1,1,-1,-1}, dy[8]={1,0,-1,0,-1,-1,1,1};
+int dx[8]={0,1,0,-1,1,-1,1,-1}, dy[8]={1,0,-1,0,-1,1,1,-1};
 int bfs(int startX, int startY, int finishX, int finishY, int maxX, int maxY){
 	matrix[startX][startY]='X';
 	queue<pair<int, ii>>q;
@@ -69,11 +69,11 @@ int main(){
 				}
 			}
 		}
-		for(int i=0; i<n; i++){
+		/*for(int i=0; i<n; i++){
 			for(int j=0; j<m; j++) cout<<matrix[i][j]<<" ";
 			cout<<endl;
-		}
-		cout<<"start: "<<start.f<<" "<<start.s<<" "<<" finish: "<<finish.f<<" "<<finish.s<<"\n"<<n<<" "<<m<<endl;
+		}*/
+		//cout<<"start: "<<start.f<<" "<<start.s<<" "<<" finish: "<<finish.f<<" "<<finish.s<<"\n"<<n<<" "<<m<<endl;
 		int ans=bfs(start.f,start.s,finish.f,finish.s,n,m);
 		if(ans==-1){
 			cout<<"King Peter, you can't go now!"<<endl;
