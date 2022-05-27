@@ -22,7 +22,7 @@ int dijkstra(int o, int d){
     pq.push({0,o});
     while(!pq.empty()){
         int u=pq.top().s; pq.pop();
-        for(auto i : adj[u]){
+        for(ii i : adj[u]){
             int v=i.f;
             int peso=i.s;
             if(dist[v]>dist[u]+peso){
