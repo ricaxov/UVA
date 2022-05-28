@@ -14,7 +14,7 @@ using namespace std;
 typedef long long ll;
 typedef pair<int,int> ii;
 
-int cont, dx[8]={0,1,0,-1,1,1,-1,-1}, dy[8]={1,0,-1,0,1,-1,1,-1};
+int cont,dx[8]={0,1,0,-1,1,1,-1,-1},dy[8]={1,0,-1,0,1,-1,1,-1};
 char matrix[101][101];
 void floodfill(int x, int y, int maxX, int maxY){
     cont++;
