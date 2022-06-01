@@ -33,6 +33,7 @@ void f(int x, int n){
             }
         }
         cout<<endl;
+        return;
     }
     for(int i=2; i<=n; i++){
         if(isprime(vec[x-1]+i) && !vis[i]){
