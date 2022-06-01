@@ -35,7 +35,6 @@ bool dfsBipartite(int v){
 }
 int main(){
     ios_base::sync_with_stdio(false);cin.tie(NULL);
-    saida
     int n,e,x,y; cin>>n;
     while(n!=0){
         cin>>e;
@@ -44,7 +43,6 @@ int main(){
             adj[x].pb(y);
             adj[y].pb(x);
         }
-        vis[0]=true;
         if(dfsBipartite(0)){
             cout<<"BICOLORABLE."<<endl;
         }
