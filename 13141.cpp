@@ -14,7 +14,7 @@ using namespace std;
 typedef long long ll;
 typedef pair<int,int> ii;
 
-vector<ll>dp(100000);
+vector<ll>dp(100);
 ll fib(ll x){
     if(x<3) return 1;
     if(dp[x]!=0) return dp[x];
