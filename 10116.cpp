@@ -17,7 +17,7 @@ typedef pair<int,int> ii;
 bool vis[10][10];
 char matrix[10][10];
 int dist[10][10],ciclo,cont;
-void cycle(int x, int y, int maxX, int maxY){
+void dfsCycle(int x, int y, int maxX, int maxY){
     cont++;
     int ax=x,ay=y;
     vis[x][y]=true;
@@ -28,7 +28,7 @@ void cycle(int x, int y, int maxX, int maxY){
     if(ax>=0 && ax<maxX && ay>=0 && ay<maxY){
         if(!vis[ax][ay]){
             dist[ax][ay]=dist[x][y]+1;
-            cycle(ax,ay,maxX,maxY);
+            dfsCycle(ax,ay,maxX,maxY);
         }
         else{
             dist[ax][ay]=dist[x][y]-dist[ax][ay];
@@ -46,7 +46,7 @@ int main(){
                 cin>>matrix[i][j];
             }
         }
-        cycle(0,x-1,n,m);
+        dfsCycle(0,x-1,n,m);
         cont-=ciclo;
         if(ciclo){
             cout<<cont<<" step(s) before a loop of "<<ciclo<<" step(s)"<<endl;
