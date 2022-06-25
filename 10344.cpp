@@ -16,7 +16,7 @@ typedef pair<int,int> ii;
 
 bool ver;
 vector<int>vec(5),tryAll;
-vector<bool>vis(100);
+vector<bool>vis(5);
 void f(int soma, int x, vector<int>&tryAll){
     if(x==5){
         if(soma==23){
