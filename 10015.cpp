@@ -15,11 +15,13 @@ typedef long long ll;
 typedef pair<int,int> ii;
 
 bool isprime(int x){
-    if(x<2)
+    if(x<2){
         return false;
+    }
     for(int i=2; i<=sqrt(x); i++){
-        if(x%i==0)
+        if(x%i==0){
             return false;
+        }
     }
     return true;
 }
