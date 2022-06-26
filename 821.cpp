@@ -48,7 +48,7 @@ int main(){
             }
         }
         cout<<fixed<<setprecision(3);
-        cout << "Case " << v++ << ": average length between pages = " << (float(soma))/cont << " clicks" << endl;
+        cout<<"Case "<<v++<<": average length between pages = "<<(float(soma))/cont<<" clicks"<<endl;
         cin>>x>>y;
     }
 }
