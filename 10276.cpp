@@ -16,12 +16,18 @@ typedef pair<int,int> ii;
 
 int main(){
     ios_base::sync_with_stdio(false);cin.tie(NULL);
-    int t,x; cin>>t;
+    int t,x,cont,soma; cin>>t;
     while(t--){
-        vector<int>vec(50),preCalculo={2,4,4,6,6,8,8,10,10,12,12,14,14,16,16,18,18,20,20,22,22,24,24,26,26,28,28,30,30,32,32,34,34,36,36,38,38,40,40,42,42,44,44,46,46,48,48,50,50,52};
-        vec[0]=1;
-        for(int i=1; i<50; i++){
-            vec[i]=vec[i-1]+preCalculo[i-1];
+        vector<int>vec(50);
+        vec[0]=1,vec[1]=3;
+        cont=0,soma=4;
+        for(int i=2; i<50; i++){
+            cont++;
+            if(cont>2){
+                cont=1;
+                soma+=2;
+            }
+            vec[i]=vec[i-1]+soma;
         }
         cin>>x;
         cout<<vec[x-1]<<endl;
