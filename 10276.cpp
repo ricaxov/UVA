@@ -16,7 +16,7 @@ typedef pair<int,int> ii;
 
 int main(){
     ios_base::sync_with_stdio(false);cin.tie(NULL);
-    int t,x,cont=0,soma=4; cin>>t;
+    int t,x,cont=0,soma=4; 
     vector<int>vec(50);
     vec[0]=1,vec[1]=3;
     for(int i=2; i<50; i++){
@@ -27,6 +27,7 @@ int main(){
         }
         vec[i]=vec[i-1]+soma;
     }
+    cin>>t;
     while(t--){
         cin>>x;
         cout<<vec[x-1]<<endl;
