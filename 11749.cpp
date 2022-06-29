@@ -17,7 +17,7 @@ typedef pair<int,int> ii;
 int cont;
 vector<pair<int,ll>>adj[501];
 vector<bool>vis(501);
-void dfs(int v, int maior){
+void dfs(int v, ll maior){
     cont++;
     vis[v]=true;
     for(auto i : adj[v]){
