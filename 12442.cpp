@@ -52,8 +52,7 @@ int main(){
         cout<<"Case "<<v++<<": "<<ans<<endl;
         for(int i=0; i<50000; i++){
             adj[i].clear();
-            vis[i]=false;
-            marked[i]=false;
+            vis[i]=marked[i]=false;
         }
     }
 }
