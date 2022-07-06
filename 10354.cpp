@@ -43,6 +43,7 @@ int main(){
             chefe[a][b]=chefe[b][a]=eu[a][b]=eu[b][a]=p;
         }
         floydWarshall(100, chefe);
+        vis[boss]=vis[office]=true;
         for(int i=0; i<n; i++){
             if(chefe[boss][office]==chefe[boss][i]+chefe[office][i]){
                 vis[i]=true;
