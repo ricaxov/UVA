@@ -20,7 +20,7 @@ void floydWarshall(int n, int dist[100][100]){
     for(int k=0; k<n; k++){
         for(int i=0; i<n; i++){
             for(int j=0; j<n; j++){
-                if(!vis[k]){
+                if(!vis[k] && !vis[i] && !vis[j]){
                     dist[i][j]=min(dist[i][j], dist[i][k]+dist[k][j]);
                 }
             }
