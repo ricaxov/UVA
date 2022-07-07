@@ -16,7 +16,7 @@ typedef pair<int,int> ii;
 
 int one,zero;
 vector<int>adj[200], color(200);
-bool bfsColors(int v){
+bool bfsBipartite(int v){
     queue<int>q;
     q.push(v);
     color[v]=1;
@@ -64,7 +64,7 @@ int main(){
         for(int i=0; i<n; i++){
             if(color[i]==inf){
                 one=zero=0;
-                if(bfsColors(i)){
+                if(bfsBipartite(i)){
                     ans+=max(1,max(one,zero));
                 }
             }
