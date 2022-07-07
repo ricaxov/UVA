@@ -65,7 +65,7 @@ int main(){
             if(color[i]==inf){
                 one=zero=0;
                 if(bfsBipartite(i)){
-                    ans+=max(1,max(one,zero));
+                    ans+=max(one,zero);
                 }
             }
         }
