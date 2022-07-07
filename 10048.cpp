@@ -110,8 +110,12 @@ int main(){
             o--;d--;
             dijkstra(o,d);
             int ans=find(d);
-            if(ans==-1) cout<<"no path"<<endl;
-            else cout<<ans<<endl;
+            if(ans==-1){
+                cout<<"no path"<<endl;
+            }
+            else{
+                cout<<ans<<endl;
+            }
         }
         ver=true;
         father.clear();
