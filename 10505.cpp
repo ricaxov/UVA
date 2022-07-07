@@ -25,7 +25,7 @@ bool bfsColors(int v){
     while(!q.empty()){
         int u=q.front(); q.pop();
         for(int i : adj[u]){
-            if(color[i]==-1){
+            if(color[i]==inf){
                 color[i]=!color[u];
                 (color[i] ? one++ : zero++);
                 q.push(i);
@@ -44,7 +44,7 @@ int main(){
     int t,n,e,x; cin>>t;
     while(t--){
         for(int i=0; i<200; i++){
-            color[i]=-1;
+            color[i]=inf;
             adj[i].clear();
         }
         int ans=0;
@@ -62,7 +62,7 @@ int main(){
             }
         }
         for(int i=0; i<n; i++){
-            if(color[i]==-1){
+            if(color[i]==inf){
                 one=zero=0;
                 if(bfsColors(i)){
                     ans+=max(1,max(one,zero));
