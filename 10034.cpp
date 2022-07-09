@@ -46,7 +46,7 @@ void unite(int x, int y){
 double kruskal(int n){
     double ans=0;
     for(int i=0; i<n; i++){
-        float peso=adj[i].f,a=adj[i].s.f,b=adj[i].s.s;
+        double peso=adj[i].f,a=adj[i].s.f,b=adj[i].s.s;
         if(!sameSet(a,b)){
             unite(a,b);
             ans+=peso;
