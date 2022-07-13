@@ -16,7 +16,7 @@ typedef pair<int,int> ii;
 
 vector<int>adj[10000];
 vector<int>dist(10000);
-double bfs(int start, int n, set<int>important){
+float bfs(int start, int n, set<int>important){
     queue<int>q;
     q.push(start);
     dist[start]=0;
@@ -29,7 +29,7 @@ double bfs(int start, int n, set<int>important){
             }
         }
     }
-    double ans=0;
+    float ans=0;
     for(auto i : important){
         ans+=dist[i];
     }
