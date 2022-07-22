@@ -15,22 +15,21 @@ typedef long long ll;
 typedef pair<int,int> ii;
 
 int kadane(vector<int>vec, int n){
-    int auxStart,start,finish=-inf,ans=-inf,soma=0;
+    bool ver=false;
+    int ans=-inf,soma=0;
     for(int i=0; i<n; i++){
         soma+=vec[i];
         if(soma<0){
             soma=0;
-            auxStart=i+1;
         }
         else{
             if(soma>ans){
                 ans=soma;
-                start=auxStart;
-                finish=i;
+                ver=true;
             }
         }
     }
-    if(finish!=-inf) return ans;
+    if(ver) return ans;
     for(int i=0; i<n; i++){
         ans=max(ans,vec[i]);
     }
