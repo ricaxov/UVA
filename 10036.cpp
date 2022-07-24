@@ -23,9 +23,9 @@ bool f(int n, int x, int k, int resto){
         return false;
     }
     if(dp[x][resto]!=-1) return dp[x][resto];
-    int soma=f(n,x+1,k,(nums[x]+resto)%k);
-    int subtracao=f(n,x+1,k,(nums[x]-resto)%k);
-    if(soma!=0 || subtracao!=0){
+    bool soma=f(n,x+1,k,(nums[x]+resto)%k);
+    bool subtracao=f(n,x+1,k,(nums[x]-resto)%k);
+    if(soma==true || subtracao==true){
         return dp[x][resto]=true;
     }
     return dp[x][resto]=false;
