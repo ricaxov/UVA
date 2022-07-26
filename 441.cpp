@@ -25,7 +25,7 @@ void f(int n, int x){
             }
         }
         cout<<endl;
-        return ;
+        return;
     }
     for(int i=x; i<n; i++){
         vec.pb(vet[i]);
