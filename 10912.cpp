@@ -14,8 +14,6 @@ using namespace std;
 typedef long long ll;
 typedef pair<int,int> ii;
 
-using namespace std;
-
 int dp[27][27][352];
 int f(int letter, int size, int sum){
     if(size==0){
