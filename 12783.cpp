@@ -18,10 +18,10 @@ vector<int>adj[1000];
 int low[1000],num[1000];
 void dfs(int v, int p, int timer, set<int>&points, set<ii>&bridges){
     low[v]=num[v]=timer++;
-    for(auto i : adj[v]){
-        if(!num[i]) {
+    for(int i : adj[v]){
+        if(!num[i]){
             dfs(i,v,timer,points,bridges);
-            low[v] = min(low[v], low[i]);
+            low[v]=min(low[v],low[i]);
             if(low[i]>=num[v]){
                 points.insert(v);
             }
@@ -31,7 +31,7 @@ void dfs(int v, int p, int timer, set<int>&points, set<ii>&bridges){
         }
         else{
             if(p!=i){
-                low[v] = min(low[v], num[i]);
+                low[v]=min(low[v],num[i]);
             }
         }
     }
@@ -53,7 +53,7 @@ int main(){
         }
         cout<<bridges.size();
         for(auto i : bridges){
-            cout<<' '<<i.s<<' '<<i.s;
+            cout<<' '<<i.f<<' '<<i.s;
         }
         cout<<endl;
         for(int i=0; i<1000; i++){
