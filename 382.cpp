@@ -25,8 +25,8 @@ int divs(int n){
 }
 int main(){
     ios_base::sync_with_stdio(false);cin.tie(NULL);
-    int n; scanf("%d", &n);
     vector<int>vec;
+    int n; scanf("%d", &n);
     while(n!=0){
         vec.pb(n);
         scanf("%d", &n);
