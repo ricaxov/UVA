@@ -26,7 +26,7 @@ int main(){
         int sum=0,ans=0;
         while(q.size()>1){    
             sum+=q.top(); q.pop();
-            sum+=q.top();q.pop();
+            sum+=q.top(); q.pop();
             q.push(sum);
             ans+=sum; 
             sum=0;
